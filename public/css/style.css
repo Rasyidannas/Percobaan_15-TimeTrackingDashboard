@@ -1,0 +1,192 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 56.25%; }
+  @media only screen and (max-width: 600px) {
+    html {
+      font-size: 43.75%; } }
+
+body {
+  box-sizing: border-box;
+  background-color: #0f1424; }
+
+img {
+  width: 100%; }
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  line-height: 1.4; }
+
+h1 {
+  font-weight: 500;
+  font-size: 6rem; }
+
+h2 {
+  font-weight: 500;
+  font-size: 5rem; }
+
+h3 {
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 1.4; }
+
+h4 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.2; }
+
+p {
+  font-size: 1.5rem; }
+
+.text-link:link, .text-link:visited {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #6f76c8;
+  display: block;
+  transition: all .2s; }
+
+.text-link:hover, .text-link--active {
+  color: #ffffff !important; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  margin: 5rem auto;
+  width: 80%;
+  display: flex;
+  grid-gap: 3rem; }
+
+.profile {
+  width: auto;
+  color: #bdc1ff; }
+  .profile__overview {
+    border-radius: 1rem;
+    padding: 3rem 3rem 6rem 3rem;
+    background-color: #5847eb;
+    position: relative;
+    z-index: 1000; }
+  .profile__image {
+    width: 8rem;
+    height: 8rem;
+    background-color: white;
+    border: 0.25rem solid #ffffff;
+    border-radius: 100%;
+    margin-bottom: 3rem; }
+  .profile__name {
+    color: #ffffff; }
+  .profile__menu {
+    margin-top: -2rem;
+    padding: 5rem 3rem 3rem 3rem;
+    background-color: #1c1f4a;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column; }
+    .profile__menu a {
+      margin-bottom: 1.5rem; }
+
+.card {
+  background-color: #1c1f4a;
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 3rem;
+  position: relative;
+  top: 5rem;
+  transition: all .3s;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start; }
+  .card__wrapper {
+    width: 75%;
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-rows: repeat(2, 24rem);
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    grid-gap: 3rem;
+    grid-auto-rows: 24rem; }
+  .card__icon {
+    color: #bdc1ff; }
+    .card__icon:hover {
+      color: #ffffff; }
+  .card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .card__content h1 {
+    font-weight: 400; }
+  .card__content p {
+    color: #bdc1ff; }
+  .card__work::after {
+    background-color: #ff8c66;
+    background-image: url("/img/icon-work.svg");
+    background-repeat: no-repeat;
+    background-position-x: 15rem;
+    background-position-y: -1rem; }
+  .card__play::after {
+    background-color: #56c2e6;
+    background-image: url("/img/icon-play.svg");
+    background-repeat: no-repeat;
+    background-position-x: 15rem;
+    background-position-y: -1rem; }
+  .card__study::after {
+    background-color: #ff5c7c;
+    background-image: url("/img/icon-study.svg");
+    background-repeat: no-repeat;
+    background-position-x: 15rem;
+    background-position-y: -1rem; }
+  .card__exercise::after {
+    background-color: #4acf81;
+    background-image: url("/img/icon-exercise.svg");
+    background-repeat: no-repeat;
+    background-position-x: 15rem;
+    background-position-y: -1rem; }
+  .card__social::after {
+    background-color: #7536d3;
+    background-image: url("/img/icon-social.svg");
+    background-repeat: no-repeat;
+    background-position-x: 15rem;
+    background-position-y: -1rem; }
+  .card__self-care::after {
+    background-color: #f1c65b;
+    background-image: url("/img/icon-self-care.svg");
+    background-repeat: no-repeat;
+    background-position-x: 15rem;
+    background-position-y: -1rem; }
+  .card::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    z-index: -100;
+    position: absolute;
+    left: 0;
+    top: -5rem; }
+  .card:hover {
+    background-color: #292e75; }
+
+.footer {
+  color: #bdc1ff;
+  text-align: center;
+  margin-bottom: 5rem; }
+  .footer p {
+    margin: auto; }
+  .footer a {
+    color: #5847eb; }
+
+@media only screen and (max-width: 900px) {
+  .container {
+    flex-direction: column; }
+  .card__wrapper {
+    width: auto; } }
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column; }
+  .card__wrapper {
+    width: auto; } }

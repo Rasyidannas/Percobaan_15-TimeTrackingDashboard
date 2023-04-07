@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>{{title}}</title>
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="profile">
+            <div class="profile__overview">
+                <div class="profile__image">
+                    <img src="img/image-jeremy.png" alt="">
+                </div>
+
+                <p class="profile__title">Report for</p>
+                <h3 class="profile__name">Jeremy Robson</h3>
+            </div>
+
+            <div class="profile__menu">
+                <a href="/" class="text-link text-link--{{#if active.daily}}active{{/if}}">Daily</a>
+                <a href="/weekly" class="text-link text-link--{{#if active.weekly}}active{{/if}}">Weekly</a>
+                <a href="/monthly" class="text-link text-link--{{#if active.monthly}}active{{/if}}">Monthly</a>
+            </div>
+        </div>

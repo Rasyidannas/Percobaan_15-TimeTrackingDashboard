@@ -1,0 +1,31 @@
+{
+  "name": "percobaan_15-timetrackingdashboard",
+  "version": "1.0.0",
+  "description": "![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
+    "start:sass": "npm-run-all --parallel watch:sass",
+    "compile:sass": "node-sass public/sass/main.scss public/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.comp.css -o public/css/style.prefix.css",
+    "compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "node-sass": "^8.0.0",
+    "nodemon": "^2.0.20",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "netlify-lambda": "^2.0.16",
+    "serverless-http": "^3.2.0"
+  }
+}

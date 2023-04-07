@@ -1,0 +1,55 @@
+// Font Variable
+$font-primary: 'Rubik', sans-serif;
+
+body{
+    font-family: $font-primary;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+h1{
+    font-weight: 500;
+    font-size: 6rem;
+}
+
+h2{
+    font-weight: 500;
+    font-size: 5rem;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 1.4;
+}
+
+h4{
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.text-link{
+    &:link,
+    &:visited{
+        font-size: 2rem;
+        text-decoration: none;
+        color: $desaturated-blue;
+        display: block;
+        transition: all .2s;
+    }
+
+    &:hover,
+    &--active{
+        color: $white !important;
+    }
+}
+
+//Preventdefault
+a{
+    text-decoration: none;
+}

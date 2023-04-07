@@ -1,0 +1,215 @@
+.container{
+    margin: 5rem auto;
+    width: 80%;
+
+    display: flex;
+    grid-gap: 3rem;
+}
+
+.profile{
+    width: auto;
+
+    color: $pale-blue;
+    
+    &__overview{
+        border-radius: 1rem;
+        padding: 3rem 3rem 6rem 3rem;
+        background-color: $blue;
+        position: relative;
+        z-index: 1000;
+    }
+
+    &__image{
+        width: 8rem;
+        height: 8rem;
+        background-color: white;
+        border: .25rem solid $white;
+        border-radius: 100%;
+        margin-bottom: 3rem;
+    }
+
+    &__name{
+        color: $white;
+    }
+
+    &__menu{
+        margin-top: -2rem;
+        padding: 5rem 3rem 3rem 3rem;
+        background-color: $dark-blue;
+        border-radius: 1rem;
+
+        display: flex;
+        flex-direction: column;
+
+        & a{
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.card{
+    
+    &__wrapper{
+        width: 75%;
+        margin-bottom: 5rem;
+
+        display: grid;
+        grid-template-rows: repeat(2, 24rem);
+        //this will auto responsive
+        grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+        grid-gap: 3rem;
+        grid-auto-rows: 24rem;
+    }
+
+    background-color: $dark-blue;
+    color: $white;
+    border-radius: 1rem;
+    padding: 3rem;
+    position: relative;
+    top: 5rem;
+    transition: all .3s;
+
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+
+    &__icon{
+        color: $pale-blue;
+
+        &:hover{
+            color: $white;
+        }
+    }
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content{
+        h1{font-weight: 400;}
+        p{color: $pale-blue;}
+    }
+
+    &__work{
+
+        &::after{
+            background-color: $light-red-1;
+            background-image: url("/img/icon-work.svg");
+            background-repeat: no-repeat;
+            background-position-x: 15rem;
+            background-position-y: -1rem;
+        }
+    }
+
+    &__play{
+        &::after{
+            background-color: $soft-blue;
+            background-image: url("/img/icon-play.svg");
+            background-repeat: no-repeat;
+            background-position-x: 15rem;
+            background-position-y: -1rem;
+        }
+    }
+
+    &__study{
+        &::after{
+            background-color: $light-red-2;
+            background-image: url("/img/icon-study.svg");
+            background-repeat: no-repeat;
+            background-position-x: 15rem;
+            background-position-y: -1rem;
+        }
+    }
+
+    &__exercise{
+        &::after{
+            background-color: $lime-green;
+            background-image: url("/img/icon-exercise.svg");
+            background-repeat: no-repeat;
+            background-position-x: 15rem;
+            background-position-y: -1rem;
+        }
+    }
+
+    &__social{
+        &::after{
+            background-color: $violet;
+            background-image: url("/img/icon-social.svg");
+            background-repeat: no-repeat;
+            background-position-x: 15rem;
+            background-position-y: -1rem;
+        }
+    }
+
+    &__self-care{
+        &::after{
+            background-color: $soft-orange;
+            background-image: url("/img/icon-self-care.svg");
+            background-repeat: no-repeat;
+            background-position-x: 15rem;
+            background-position-y: -1rem;
+        }
+    }
+
+    &::after{
+        content: "";
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+        z-index: -100;
+        position: absolute;
+        left: 0;
+        top: -5rem;
+    }
+
+    &:hover{
+        background-color: hsl(236, 48%, 31%);
+    }
+}
+
+.footer{
+    color: $pale-blue;
+    text-align: center;
+    margin-bottom: 5rem;
+
+    p{
+        margin: auto;
+    }
+
+    a{
+        color: $blue;
+    }
+}
+
+
+
+@media only screen and (max-width: 900px) {
+    .container{
+        flex-direction: column;
+    }
+    
+    .card{
+        
+        &__wrapper{
+            width: auto;
+            // margin-bottom: 5rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        flex-direction: column;
+    }
+    
+    .card{
+
+        &__wrapper{
+            width: auto;
+            // grid-template-rows: repeat(auto-fit, 24rem);
+            // margin-bottom: 25rem;
+        }
+    }
+}
